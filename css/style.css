@@ -139,7 +139,7 @@ a { color: var(--color-primary); text-decoration: none; }
 .hero {
   background:
     linear-gradient(120deg, rgba(23,53,107,0.92) 0%, rgba(15,36,74,0.85) 45%, rgba(12,31,66,0.55) 100%),
-    url('https://images.unsplash.com/photo-1709880754472-be89c13abc52?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    url('https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #fff;
   padding: 100px 0;
 }
