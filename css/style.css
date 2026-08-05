@@ -191,20 +191,13 @@ a { color: var(--color-primary); text-decoration: none; }
   z-index: 1;
 }
 
-/* On narrow screens the tall stacked text pushes the hero's height far past
-   the video's 16:9 aspect ratio, so a full-bleed cover crop zooms in way too
-   tight. Show the video as an in-flow banner above the text instead. */
+/* On narrow screens the stacked text makes the hero much taller than the
+   video's 16:9 aspect ratio, so keep the crop framed on the two people and
+   trim the padding a little so the section (and the resulting zoom) isn't
+   as extreme, while the video stays behind the text like on desktop. */
 @media (max-width: 820px) {
-  .hero-video { padding: 0 0 40px; }
-  .hero-video::before { display: none; }
-  .hero-bg-video {
-    position: static;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-position: center 35%;
-  }
-  .hero-video .container { padding-top: 28px; }
+  .hero-video { padding: 64px 0; }
+  .hero-bg-video { object-position: center 30%; }
 }
 
 .hero-content { flex: 1 1 420px; max-width: 620px; }
