@@ -137,9 +137,11 @@ a { color: var(--color-primary); text-decoration: none; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--color-sky) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
+  background:
+    linear-gradient(120deg, rgba(23,53,107,0.92) 0%, rgba(15,36,74,0.85) 45%, rgba(12,31,66,0.55) 100%),
+    url('https://images.unsplash.com/photo-1709880754472-be89c13abc52?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
   color: #fff;
-  padding: 70px 0;
+  padding: 100px 0;
 }
 
 .hero .container {
@@ -149,7 +151,7 @@ a { color: var(--color-primary); text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.hero-content { flex: 1 1 420px; }
+.hero-content { flex: 1 1 420px; max-width: 620px; }
 
 .hero-content h1 {
   font-size: 2.4rem;
@@ -165,15 +167,6 @@ a { color: var(--color-primary); text-decoration: none; }
 }
 
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-.hero-image {
-  flex: 1 1 380px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
-}
-
-.hero-image img { border-radius: var(--radius); }
 
 /* Sections */
 section { padding: 70px 0; }
