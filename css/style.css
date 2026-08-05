@@ -1,0 +1,353 @@
+:root {
+  --color-primary: #17356b;
+  --color-primary-dark: #0c1f42;
+  --color-sky: #2f8fdb;
+  --color-accent: #6cbf3f;
+  --color-bg: #f4f8fb;
+  --color-bg-alt: #ffffff;
+  --color-text: #1c2530;
+  --color-text-light: #5a6672;
+  --color-border: #e2e8ee;
+  --max-width: 1140px;
+  --radius: 10px;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--color-primary); text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.5px;
+}
+
+.logo span { color: var(--color-accent); }
+
+.logo-img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--color-primary-dark);
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--color-primary);
+}
+
+.header-cta {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover { background: var(--color-primary-dark); }
+
+.btn-outline {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.btn-large {
+  padding: 14px 32px;
+  font-size: 1rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-sky) 0%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
+  color: #fff;
+  padding: 70px 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-content { flex: 1 1 420px; }
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.hero-image {
+  flex: 1 1 380px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.hero-image img { border-radius: var(--radius); }
+
+/* Sections */
+section { padding: 70px 0; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 2rem;
+  color: var(--color-primary-dark);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto 44px;
+}
+
+/* Cards grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+}
+
+.card .icon {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--color-primary-dark);
+}
+
+.card p {
+  color: var(--color-text-light);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Alt section background */
+.section-alt { background: var(--color-bg-alt); }
+
+/* About preview */
+.about-preview {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about-preview .about-img { flex: 1 1 360px; border-radius: var(--radius); overflow: hidden; }
+.about-preview .about-text { flex: 1 1 420px; }
+
+/* Contact / location */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.info-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  gap: 12px;
+}
+
+.info-list li strong { color: var(--color-primary-dark); min-width: 90px; }
+
+.map-embed iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: var(--radius);
+}
+
+/* CTA band */
+.cta-band {
+  background: var(--color-primary-dark);
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.cta-band h2 { margin: 0 0 20px; }
+
+.cta-band .btn-outline {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--color-text);
+  color: #d7e0e0;
+  padding: 40px 0 20px;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.footer-grid h4 { color: #fff; margin: 0 0 14px; }
+
+.site-footer a { color: #d7e0e0; }
+.site-footer a:hover { color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 16px;
+  text-align: center;
+  color: #9fb0b0;
+  font-size: 0.85rem;
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  z-index: 200;
+}
+
+/* Responsive nav */
+@media (max-width: 820px) {
+  .nav-toggle { display: block; }
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    display: none;
+  }
+  .main-nav.open { display: block; }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 20px;
+  }
+  .main-nav ul li { padding: 10px 0; border-bottom: 1px solid var(--color-border); }
+  .header-cta .btn-outline { display: none; }
+  .hero-content h1 { font-size: 1.9rem; }
+}
